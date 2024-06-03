@@ -1,0 +1,132 @@
+//varuiabler
+$background-color: #f0f0f0;
+$darkmode-background-color: #121212;
+$second-background-color: #007BFF;
+$text-color: #121212;
+$darkmode-text-color: #ffffff;
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: $background-color;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.dark-mode {
+        background-color: $darkmode-background-color;
+        color: $darkmode-text-color;
+    }
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+
+    header {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        button#toggleDarkMode {
+            position: absolute;
+            left: 0;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 0 5px 0;
+            background-color: $second-background-color;
+            color: $darkmode-text-color;
+            cursor: pointer;
+        }
+
+        h1 {
+            margin: 1.5rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .inputBar {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        form {
+            margin: 1rem;
+
+            #nameInput {
+                width: 80%;
+            }
+
+            input, button {
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                background-color: rgb(41, 161, 43);
+                color: white;
+                cursor: pointer;
+
+                &:disabled {
+                    background-color: #f73737;
+                    color: #ffffff;
+                    cursor: not-allowed;
+                }
+
+            }
+        }
+    }
+
+    #marsImagesContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .marsImageCard {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    } 
+}
+
+@media (min-width: 500px) {
+    .container{
+        header {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+        #marsImagesContainer {
+            max-width: 80%;
+            margin: auto;
+
+            .marsImageCard {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                margin: 10px;
+                padding: 10px;
+                width: 400px;
+    
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

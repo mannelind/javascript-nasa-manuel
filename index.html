@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Rover Photos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button id="toggleDarkMode">Dark Mode</button>
+            <h1>Mars Rover Photos</h1>
+        </header>
+        <div class="inputBar">
+            <form id="nameForm">
+                <label for="nameInput">Vad heter du?</label>
+                <input type="text" id="nameInput" required minlength="3">
+                <button type="submit" id="submitButton" disabled>Visa</button>
+            </form>
+        </div>
+        <div id="nameDisplay"></div>
+        <div id="marsImagesContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
