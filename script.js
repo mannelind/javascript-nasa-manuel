@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleDarkModeButton = document.getElementById('toggleDarkMode');
     const apiKey = 'meZ8f32bACyEFZVb1HSgNGMOvKbZVIvs8PZ2jtoz';
     
-    // Aktivera/inaktivera knappen baserat på input-längd
+    // Aktivera/inaktivera knappen baserat på antal tecken
     input.addEventListener('input', () => {
         submitButton.disabled = input.value.length < 3;
     });
 
-    // Hantera formulärets inlämning
+    // hantering av inmatning
     document.getElementById('nameForm').addEventListener('submit', (event) => {
         event.preventDefault();
         nameDisplay.textContent = `Hej, ${input.value.trim()}!`;
